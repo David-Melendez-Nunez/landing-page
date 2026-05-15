@@ -250,7 +250,7 @@ const InteractiveAgenda = () => {
 
 const InteractiveReservation = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const email = "nextgenitspain@gmail.com";
+  const email = "contacto@nextgenitspain.es";
   const subject = "RESERVAR PLAZA";
   const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
 
