@@ -99,18 +99,26 @@ export default function App() {
         </p>
 
         {/* Input Reactivo Minimalista */}
-        <div
-          className="w-full max-w-md relative group mt-2"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          {/* Resplandor trasero de cobre en hover */}
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#B87333]/0 via-[#B87333]/30 to-[#B87333]/0 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 pointer-events-none"></div>
-          
-          <form 
-            onSubmit={handleSubmit}
-            className="relative flex items-center bg-[#0A0A0A] border border-white/5 rounded-xl sm:rounded-2xl p-1 sm:p-1.5 focus-within:border-[#B87333]/50 focus-within:bg-[#0F0F0F] transition-all duration-500 shadow-2xl"
+        <div className="w-full max-w-md mt-2">
+          {/* Mensaje de Waitlist */}
+          <div className="w-full text-left mb-2.5 pl-2 sm:pl-3">
+            <p className="font-mono text-[10px] sm:text-xs text-neutral-500 tracking-wider">
+              <span className="text-[#B87333]">&gt;</span> Únete a la <span className="text-neutral-300">waitlist</span>_
+            </p>
+          </div>
+
+          <div
+            className="w-full relative group"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
+            {/* Resplandor trasero de cobre en hover */}
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#B87333]/0 via-[#B87333]/30 to-[#B87333]/0 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 pointer-events-none"></div>
+            
+            <form 
+              onSubmit={handleSubmit}
+              className="relative flex items-center bg-[#0A0A0A] border border-white/5 rounded-xl sm:rounded-2xl p-1 sm:p-1.5 focus-within:border-[#B87333]/50 focus-within:bg-[#0F0F0F] transition-all duration-500 shadow-2xl"
+            >
             <Terminal className="w-4 h-4 sm:w-5 sm:h-5 text-neutral-600 ml-2 sm:ml-3 shrink-0" />
             <input
               type="email"
@@ -135,6 +143,7 @@ export default function App() {
               </span>
             </button>
           </form>
+          </div>
         </div>
 
         {/* Detalles Técnicos "Próximamente" */}
